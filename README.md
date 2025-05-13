@@ -140,6 +140,7 @@ Nombre de sessions et achats par heure de la journée
 
 > Pour visualiser l'ensemble des graphiques interactifs, consultez le tableau de bord complet (`dashboard.html`). 
 
+
 ## Difficultés rencontrées
 
 * **Compatibilité avec Scala 2.13 :** La bibliothèque Vegas n'étant pas compatible avec Scala 2.13, nous avons dû utiliser Chart.js pour les visualisations.
