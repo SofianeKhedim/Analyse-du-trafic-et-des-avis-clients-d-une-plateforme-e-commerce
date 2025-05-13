@@ -1,0 +1,59 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Distribution des catégories de produits</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+      </head>
+      <body>
+        <div style="width: 800px; height: 500px;">
+          <canvas id="categoryChart"></canvas>
+        </div>
+        <script>
+          const ctx = document.getElementById('categoryChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["High-tech", "Mode", "Beauté", "Sport", "Maison", "Livres"],
+              datasets: [{
+                label: 'Nombre de sessions',
+                data: [84300, 84078, 84072, 83765, 83600, 83443],
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Distribution des catégories de produits',
+                  font: { size: 18 }
+                },
+                legend: {
+                  position: 'top',
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Nombre de sessions'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Catégorie'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    

@@ -1,0 +1,56 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Distribution des notes d'avis</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+      </head>
+      <body>
+        <div style="width: 800px; height: 500px;">
+          <canvas id="reviewChart"></canvas>
+        </div>
+        <script>
+          const ctx = document.getElementById('reviewChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+              labels: ["1.0", "2.0", "3.0", "3.002253963936577", "4.0", "5.0"],
+              datasets: [{
+                label: 'Nombre d\'avis',
+                data: [99478, 99800, 99281, 4978, 99662, 100059],
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.6)',
+                  'rgba(255, 159, 64, 0.6)',
+                  'rgba(255, 205, 86, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(54, 162, 235, 0.6)'
+                ],
+                borderColor: [
+                  'rgb(255, 99, 132)',
+                  'rgb(255, 159, 64)',
+                  'rgb(255, 205, 86)',
+                  'rgb(75, 192, 192)',
+                  'rgb(54, 162, 235)'
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Distribution des notes d\'avis',
+                  font: { size: 18 }
+                },
+                legend: {
+                  position: 'top',
+                }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    

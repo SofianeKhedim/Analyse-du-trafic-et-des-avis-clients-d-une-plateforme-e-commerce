@@ -1,0 +1,59 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Taux de conversion par appareil</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+      </head>
+      <body>
+        <div style="width: 800px; height: 500px;">
+          <canvas id="deviceChart"></canvas>
+        </div>
+        <script>
+          const ctx = document.getElementById('deviceChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["Desktop", "Mobile"],
+              datasets: [{
+                label: 'Taux de conversion (%)',
+                data: [98.99, 98.98],
+                backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                borderColor: 'rgba(255, 159, 64, 1)',
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Taux de conversion par type d\'appareil',
+                  font: { size: 18 }
+                },
+                legend: {
+                  position: 'top',
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Taux de conversion (%)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Type d\'appareil'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    

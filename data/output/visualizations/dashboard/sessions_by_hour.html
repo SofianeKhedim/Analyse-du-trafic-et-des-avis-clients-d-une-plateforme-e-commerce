@@ -1,0 +1,70 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Sessions par heure</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+      </head>
+      <body>
+        <div style="width: 800px; height: 500px;">
+          <canvas id="hourlyChart"></canvas>
+        </div>
+        <script>
+          const ctx = document.getElementById('hourlyChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+              datasets: [
+                {
+                  label: 'Sessions',
+                  data: [20910, 20865, 21102, 21138, 20971, 20922, 20917, 20942, 20937, 20932, 21079, 21279, 20927, 20852, 20996, 21001, 20987, 20866, 20810, 20977, 21050, 20745, 20980, 21073],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 2,
+                  tension: 0.1
+                },
+                {
+                  label: 'Achats',
+                  data: [20701, 20654, 20853, 20927, 20764, 20692, 20699, 20716, 20716, 20725, 20854, 21064, 20724, 20628, 20783, 20797, 20757, 20655, 20609, 20776, 20822, 20539, 20784, 20889],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 2,
+                  tension: 0.1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Sessions et achats par heure de la journée',
+                  font: { size: 18 }
+                },
+                legend: {
+                  position: 'top',
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Nombre'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Heure'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    

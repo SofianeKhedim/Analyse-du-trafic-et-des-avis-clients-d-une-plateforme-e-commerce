@@ -1,0 +1,68 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Sessions par jour de la semaine</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+      </head>
+      <body>
+        <div style="width: 800px; height: 500px;">
+          <canvas id="dayChart"></canvas>
+        </div>
+        <script>
+          const ctx = document.getElementById('dayChart').getContext('2d');
+          const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              datasets: [
+                {
+                  label: 'Sessions',
+                  data: [72033, 72127, 71298, 71832, 72113, 72169, 71686],
+                  backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+                },
+                {
+                  label: 'Achats',
+                  data: [71310, 71387, 70579, 71106, 71378, 71421, 70947],
+                  backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Sessions par jour de la semaine',
+                  font: { size: 18 }
+                },
+                legend: {
+                  position: 'top',
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Nombre'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Jour de la semaine'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    
