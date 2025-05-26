@@ -217,7 +217,45 @@ object SparkSessionWrapper {
 
 ---
 
-## 4. Conclusions et axes d'amélioration
+## 4. Visualisations
+
+L'ensemble des visualisations interactives générées par notre analyse est accessible via le tableau de bord en ligne :
+
+**🔗 Lien vers le tableau de bord interactif :**  
+https://visualization-analyse-de-donnees-e-commerce-spark-scala.vercel.app/
+
+### 4.1 Principales visualisations
+
+**Distribution des sessions par catégorie de produit**
+Ce graphique en barres présente la répartition équilibrée des 503 258 sessions analysées entre les six catégories de produits. On observe une distribution remarquablement homogène avec High-tech en tête (84 300 sessions), suivi de près par Mode (84 078), Beauté (84 072), Sport (83 765), Maison (83 600) et Livres (83 443). Cette uniformité suggère une stratégie marketing bien équilibrée et un catalogue produits diversifié répondant aux différents besoins des utilisateurs.
+
+---
+
+**Taux de conversion par catégorie de produit**
+Cette visualisation met en évidence les performances commerciales de chaque catégorie. Avec un taux de conversion global de 98.98%, toutes les catégories affichent des performances exceptionnelles. High-tech se distingue légèrement avec le montant d'achat moyen le plus élevé (49.67€), tandis que les autres catégories maintiennent des performances très similaires autour de 49.50€. Cette homogénéité indique une expérience utilisateur cohérente à travers toutes les catégories.
+
+---
+
+**Nombre de sessions et achats par heure de la journée**
+L'analyse temporelle révèle une distribution étonnamment stable des sessions tout au long des 24 heures, avec environ 21 000 sessions par heure. Cette constance, inhabituelle pour un site e-commerce traditionnel, suggère soit une audience internationale répartie sur plusieurs fuseaux horaires, soit un modèle d'affaires particulier (plateforme B2B, services en continu, etc.). Le taux de conversion reste stable à travers toutes les heures, indiquant une expérience utilisateur optimisée en permanence.
+
+### 4.2 Tableau de bord interactif
+
+Le tableau de bord déployé sur Vercel offre :
+- **Graphiques interactifs** utilisant Chart.js pour une exploration dynamique des données
+- **Visualisations responsive** adaptées à tous les types d'écrans
+- **Navigation intuitive** entre les différentes analyses
+- **Données en temps réel** reflétant les 503 258 sessions analysées
+
+Ces visualisations permettent aux équipes business de :
+- Identifier rapidement les tendances par catégorie de produit
+- Comprendre les patterns temporels d'utilisation
+- Analyser la répartition géographique des clients
+- Évaluer l'efficacité des différents segments client
+
+---
+
+## 5. Conclusions et axes d'amélioration
 
 ### 4.1 Conclusions principales
 
