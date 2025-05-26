@@ -128,6 +128,8 @@ runMain com.ecommerceanalysis.visualizers.ChartGenerator
 
 ## Visualisations
 
+https://visualization-analyse-de-donnees-e-commerce-spark-scala.vercel.app/
+
 ![Distribution des sessions par catégorie de produit](/data/output/visualizations/png/Distribution_sessions_categorie.png "")
 Distribution des sessions par catégorie de produit
 
